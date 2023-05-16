@@ -1,0 +1,33 @@
+{
+    
+    "productos":[
+    
+    {
+        
+        "Titulo":"Casa taradellas",
+        "Texto":"Oferta sus pizzas",
+        "Link":"https://casatarradellas.es/",
+        "Imagen":"imagen/Pizza.jpg"
+        
+        
+    },
+    
+    {
+        "Titulo":"Monster",
+        "Texto":"Oferta sus bebidas energeticas",
+        "Link":"https://www.monsterenergy.com/es/es/home",
+        "Imagen":"imagen/monster.jpg"
+        
+    },
+    
+    {
+        "Titulo":"PlayStation 5 sin Stock",
+        "Texto":"Play Station se queda sin materiales para fabricar la play 5",
+        "Link":"https://www.playstation.com/es-es/",
+        "Imagen":"imagen/play5.jpg"
+        
+    }
+    
+    ]
+
+}
