@@ -31,7 +31,7 @@ async function crearCarrito() {
 
 // traer los productos
 async function traerProductos() {
-  console.log("traer prodcutoss " + nproductos);
+  // console.log("traer prodcutoss " + nproductos);
   const url = "https://fakestoreapi.com/products?limit=" + nproductos;
 
   try {
