@@ -42,7 +42,7 @@ label {
 }
 
 
-
+/*Apartado de ver el producto  */
 
 .overlay {
 	position: fixed;
@@ -64,11 +64,12 @@ label {
   .modal {
 	color: #000;
 	background: #fff;
-	max-height: calc(100% - 100px) !important;
+	max-height: 100% !important;
+	height: 450px;
 	position: fixed !important;
 	top: 50% !important;
 	left: 50% !important;
-	max-width: 450px !important;
+	max-width:50% !important; 
 	transform: translate(-50%, -50%) !important;
 	transition: .3s ease !important;
 	display: none;

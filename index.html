@@ -10,13 +10,15 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
     
     <!-- javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
 </head>
 <body>
+
+  
 
     <!-- MENU -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,31 +35,33 @@
               <a class="nav-link" id="Categorias" href="#">Categorias</a>
             </li> -->
             <li class="nav-item mr-auto">
-              <a class="nav-link" id="electronica" href="#">Electronica<i class="bi bi-bag-fill"></i></a>
+              <a class="nav-link" id="electronica" href="#">Electronica</a>
             </li>
             <li class="nav-item mr-auto">
-              <a class="nav-link" id="joyas" href="#">Joyas<i class="bi bi-bag-fill"></i></a>
+              <a class="nav-link" id="joyas" href="#">Joyas</a>
             </li>
             <li class="nav-item mr-auto">
-              <a class="nav-link" id="hombre" href="#">Hombre<i class="bi bi-bag-fill"></i></a>
+              <a class="nav-link" id="hombre" href="#">Hombre</a>
             </li>
             <li class="nav-item mr-auto">
-              <a class="nav-link" id="mujer" href="#">Mujer<i class="bi bi-bag-fill"></i></a>
+              <a class="nav-link" id="mujer" href="#">Mujer</a>
             </li>
             <li class="nav-item mr-auto">
-              <a class="nav-link" href="#" id="carrito">carrito<i class="bi bi-bag-fill"></i></a>
+              <a class="nav-link" href="#" id="carrito">carrito</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Acerca de nosotros</a>
+              <a class="nav-link" id="login" href="#">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" id="registro" href="#">Registro</a>
             </li>
           </ul>
         </div>
       </nav>
-
-
+      <br>
+      
+<button id="boton1" onclick="ordenardes()">Descendente</button><br><br>
+<button id="boton2" onclick="ordenarasc()">Ascesdente</button><br><br>
       
     <!-- lo uso pa mostrar productos  -->
     <!-- quitando el container y poniendo roq me muestra 4 -->
@@ -72,6 +76,5 @@
    
     <script src="main.js"></script>
 
-    
 </body>
 </html>
