@@ -5,6 +5,7 @@ let respuesta;
 let nproductos = 8;
 $('#boton1').hide();
 $('#boton2').hide();
+$('#tramitar').hide();
 
 let carrito;
 crearCarrito();
@@ -154,6 +155,7 @@ document.getElementById("indice").addEventListener("click", indice);
 function indice() {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').hide();
   document.getElementById("categorias").innerHTML = "";
   document.getElementById("contenedor").innerHTML = "";
   document.getElementById("contenedor").innerHTML =
@@ -163,6 +165,7 @@ function indice() {
 document.getElementById("Productos").addEventListener("click", function () {
   $('#boton1').show();
   $('#boton2').show();
+  $('#tramitar').hide();
   pintarProductos(respuesta);
 });
 
@@ -197,6 +200,7 @@ function muestraCategoria(j) {
 document.getElementById("electronica").addEventListener("click", function () {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').hide();
 
   document.getElementById("contenedor").innerHTML = "";
   document.getElementById("categorias").innerHTML = "";
@@ -233,6 +237,7 @@ function muestraCategoria(j) {
 document.getElementById("joyas").addEventListener("click", function () {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').hide();
   document.getElementById("categorias").innerHTML = "";
   document.getElementById("contenedor").innerHTML = "";
   muestraCategoria(categoria2);
@@ -267,6 +272,7 @@ function muestraCategoria(j) {
 document.getElementById("hombre").addEventListener("click", function () {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').hide();
   document.getElementById("categorias").innerHTML = "";
   document.getElementById("contenedor").innerHTML = "";
   muestraCategoria(categoria3);
@@ -300,12 +306,17 @@ function muestraCategoria(j) {
 document.getElementById("mujer").addEventListener("click", function () {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').hide();
   document.getElementById("categorias").innerHTML = "";
   document.getElementById("contenedor").innerHTML = "";
   muestraCategoria(categoria4);
 });
 
  // carrito
+
+ function tramitarPedido(){
+  alert("Pedido en tramite");
+ }
 function showcarrito(){
   let carro;
   // recorrer el carro.products con foreach cada recorrido llamar al servicio de mostrar producto por id 
@@ -320,17 +331,23 @@ function showcarrito(){
                 .then(res=>res.json())
                 .then(json=>{
                   document.getElementById("contenedor").innerHTML += `
-      
-                 
-                <div>${json.title}</div><br>
-                <br>
-                <div>${json.description}</div><br>
-                <br>
-        
-        
+                  
+                  <div class="col-2">
+                  <div class="card" style="width: 15rem;">    
+                      <img class="card-img-top" src="${json.image}" alt="Card image cap" with="100px" height="200px">
+                      <div class="card-body">
+                          <h5 class="card-title">${json.title}</h5>
+                          <p class="card-subtitle mb-2 text-muted">Precio: ${json.price}$</p>
+                          <p class="card-subtitle mb-2 text-muted">Cantidad:1</p>
+                          <h5 class="card-title">${json.category}</h5>
+                          
 
-      
-        
+                      </div>
+                  </div> 
+              </div> 
+                </div>
+                <br>
+
         `;
                 })
             
@@ -338,15 +355,14 @@ function showcarrito(){
               
             })
             
-            
-
-
-  
 }
 
+
+// capa carrito
 document.getElementById("carrito").addEventListener("click", function () {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').show();
   document.getElementById("categorias").innerHTML = "";
   document.getElementById("contenedor").innerHTML = "";
   showcarrito();
@@ -384,6 +400,7 @@ async function login(){
 document.getElementById("login").addEventListener("click", function () {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').hide();
   document.getElementById("categorias").innerHTML = "";
   document.getElementById("contenedor").innerHTML = "";
   login2();
@@ -451,6 +468,7 @@ function register(){
 document.getElementById("registro").addEventListener("click", function () {
   $('#boton1').hide();
   $('#boton2').hide();
+  $('#tramitar').hide();
   document.getElementById("categorias").innerHTML = "";
   document.getElementById("contenedor").innerHTML = "";
   registro();
@@ -503,7 +521,7 @@ function registro(){
   </div>
   <a href="#" onclick='register()' type="submit" class="btn btn-primary">Sign in</a>
 </form>
-
+<br><br><br>
       
         
         `;

@@ -81,3 +81,9 @@ label {
 	z-index: 2;
 	opacity: 1;
   }
+  #tramitar{
+	display: flex;
+	justify-content: center;
+	
+
+  }
